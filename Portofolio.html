@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jerry Anggara Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+    <style>
+      body {
+        font-family: "Work Sans", sans-serif;
+        background-color: #fcfaed;
+      }
+    </style>
+  </head>
+  <body class="text-black mx-auto max-w-screen-xl">
+    <!-- Navbar -->
+    <header
+      class="flex flex-col sm:flex-row justify-between items-center p-6 gap-4 sm:gap-0"
+    >
+      <h1 class="text-2xl font-bold">JerryAgg</h1>
+      <nav class="flex flex-wrap justify-center gap-4 font-normal text-base">
+        <a href="#about" class="hover:border-b-2 border-[#4B82FC]">About Me</a>
+        <a href="#skill" class="hover:border-b-2 border-[#F36D4D]">Skill</a>
+        <a href="#project" class="hover:border-b-2 border-[#FACA52]">Project</a>
+        <a href="#experience" class="hover:border-b-2 border-[#4B82FC]"
+          >Experience</a
+        >
+      </nav>
+    </header>
+
+    <section
+      class="flex flex-col mb-6 lg:flex-row justify-between items-center px-6 lg:px-10 py-4 gap-10"
+    >
+      <div class="max-w-xl text-center lg:text-left">
+        <h2 class="text-4xl sm:text-6xl font-extrabold text-[#F36D4D]">
+          Most Valuable
+        </h2>
+        <h3 class="text-4xl sm:text-6xl font-extrabold">
+          Computer Science<br />Student
+          <span class="text-sm italic font-normal">*self-claim</span>
+        </h3>
+        <p class="mt-4 text-lg">
+          I’m PALUGADA person, which means “whatever you need, I have it”. Just
+          give me 5 weeks, I will solve your problem.
+        </p>
+        <a href="#contact">
+          <button
+            class="mt-6 bg-[#F36D4D] text-white font-semibold px-4 py-2 shadow-[4px_4px_0_0_#000] hover:shadow-none transition"
+          >
+            Let's collaborate! Reach out to me ASAP!
+          </button>
+        </a>
+      </div>
+      <div class="flex flex-col items-center">
+        <img src="Profil Web.png" alt="JerryAgg" class="w-full max-w-xs" />
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section
+      id="about"
+      class="bg-[#4B82FC] text-white border-[3px] border-black mx-4 md:mx-10 p-4 sm:p-6 rounded-lg shadow-[6px_6px_0_0_#000] mb-10"
+    >
+      <h2 class="text-3xl font-extrabold mb-4 text-center">About Me</h2>
+      <div class="flex flex-col md:flex-row gap-10 items-center">
+        <model-viewer
+          src="shiba.glb"
+          alt="Astronaut 3D Model"
+          auto-rotate
+          camera-controls
+          ar
+          shadow-intensity="1"
+          exposure="0.5"
+          class="max-h-[500px] max-w-[150px] w-full"
+        ></model-viewer>
+        <p class="text-lg leading-relaxed text-justify">
+          Ciao! I'm Jerry Anggara—a Computer Science student with a deep passion
+          for technology and innovation. I specialize in Machine Learning, Web
+          Development, IoT, and Data Science, leveraging these skills to create
+          solutions for real-world challenges.<br />
+          I believe technology holds the power to solve even the most complex
+          problems, and I'm committed to turning ideas into impactful solutions.
+          Let's collaborate and harness the potential of technology to address
+          the problems you face!
+        </p>
+      </div>
+    </section>
+
+    <!-- Skill -->
+    <section id="skill" class="text-center">
+      <h2 class="text-3xl font-extrabold mb-4">Skill</h2>
+      <div class="flex justify-center gap-6 px-4 mb-8 flex-wrap">
+        <button
+          class="category-btn px-4 py-2 shadow hover:shadow-md transition bg-[#F36D4D] shadow-[4px_4px_0_0_#000] text-white font-semibold"
+          onclick="showCategory('data-science', this)"
+        >
+          Data Science
+        </button>
+        <button
+          class="category-btn px-4 py-2 shadow hover:shadow-md transition text-black font-semibold"
+          onclick="showCategory('data-analyst', this)"
+        >
+          Data Analyst
+        </button>
+        <button
+          class="category-btn px-4 py-2 shadow hover:shadow-md transition text-black font-semibold"
+          onclick="showCategory('web-dev', this)"
+        >
+          Website Development
+        </button>
+      </div>
+      <div
+        id="data-science"
+        class="skills-grid grid grid-cols-2 pr-4 pl-10 sm:grid-cols-3 pl-8 md:grid-cols-4 gap-6 py-4 pl-8"
+      >
+        <div class="flex items-center">
+          <img
+            src="img/Python.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="Python"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Pandas.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="Pandas"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Numpy.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="Numpy"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Matplotlib.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="Matplotlib"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Seaborn.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="Seaborn"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Scikitlearn.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="Scikit Learn"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Pytorch.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="PyTorch"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Tensorflow.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="TensorFlow"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/HuggingFace.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="HuggingFace"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Github.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="GitHub"
+          />
+        </div>
+      </div>
+
+      <div
+        id="data-analyst"
+        class="skills-grid hidden grid grid-cols-2 pr-4 pl-10 sm:grid-cols-3 pl-8 md:grid-cols-4 gap-6 py-4 pl-8"
+      >
+        <div class="flex items-center">
+          <img
+            src="img/Python.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+            alt="Python"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Excel.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/SQL.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/SQL Server.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Tableau.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Power BI.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Looker Studio.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Big Query.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+      </div>
+
+      <div
+        id="web-dev"
+        class="skills-grid hidden grid grid-cols-2 pr-4 pl-10 sm:grid-cols-3 pl-8 md:grid-cols-4 gap-6 py-4 pl-8"
+      >
+        <div class="flex items-center">
+          <img
+            src="img/HTML.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/CSS.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/JS.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Tailwind.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Nodejs.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Express.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Django.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Flask.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/MySQL.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/PosgreSQL.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/MongoDB.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="img/Git.png"
+            class="h-[56px] sm:h-[80px] w-auto object-contain object-left"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="text-center py-10">
+      <h2 class="text-3xl font-extrabold mb-6">Project</h2>
+      <div class="grid sm:grid-cols-2 gap-6 px-4 md:px-16">
+        <div
+          class="project-box border border-black rounded-lg py-4 px-6 text-left bg-white transition duration-300 hover:bg-[#FACA52] hover:shadow-[6px_6px_0_0_#4B82FC]"
+        >
+          <h3 class="text-lg font-bold mb-2">
+            Used Car Price Prediction and Recommendation Website
+          </h3>
+          <p class="text-base mb-2 text-justify">
+            This system is equipped with Artificial Intelligence to assist in
+            resolving issues related to used car price determination. The AI
+            model employed is XGBoost, which demonstrates an accuracy of up to
+            97.8%. Furthermore, the website incorporates a used car
+            recommendation system that can be customized according to user
+            preferences.
+          </p>
+          <a
+            href="https://github.com/JerryAnggara"
+            class="text-bold text-[#4B82FC] underline"
+            >Link Github</a
+          >
+        </div>
+        <div
+          class="project-box border border-black rounded-lg py-4 px-6 text-left bg-white transition duration-300 hover:bg-[#FACA52] hover:shadow-[6px_6px_0_0_#4B82FC]"
+        >
+          <h3 class="text-lg font-bold mb-2">
+            Data Analyst Learning LMS Website
+          </h3>
+          <p class="text-base mb-2 text-justify">
+            Datalyst is a complimentary Learning Management System (LMS)
+            designed to facilitate self-directed learning in data analysis for
+            any individual through interactive modules, quizzes, and
+            project-based practical exercises. This platform was developed
+            utilizing Express.js, Node.js, Tailwind CSS, and MySQL.
+          </p>
+          <a
+            href="https://github.com/JerryAnggara"
+            class="text-bold text-[#4B82FC] underline"
+            >Link Github</a
+          >
+        </div>
+        <div
+          class="project-box border border-black rounded-lg py-4 px-6 text-left bg-white transition duration-300 hover:bg-[#FACA52] hover:shadow-[6px_6px_0_0_#4B82FC]"
+        >
+          <h3 class="text-lg font-bold mb-2">
+            Customer Relationship Management Data Visualization
+          </h3>
+          <p class="text-base mb-2 text-justify">
+            CRM data analysis utilizes SQL Server for data processing and
+            Tableau for interactive visualization, aiming to identify customer
+            trends, sales patterns, market segmentation, and provide data-driven
+            strategic recommendations through an informative dashboard.
+          </p>
+          <a
+            href="https://github.com/JerryAnggara"
+            class="text-bold text-[#4B82FC] underline"
+            >Link Github</a
+          >
+        </div>
+        <div
+          class="project-box border border-black rounded-lg py-4 px-6 text-left bg-white transition duration-300 hover:bg-[#FACA52] hover:shadow-[6px_6px_0_0_#4B82FC]"
+        >
+          <h3 class="text-lg font-bold mb-2">
+            Banana Ripeness Detection System Using AI & IoT
+          </h3>
+          <p class="text-base mb-2 text-justify">
+            This intelligent system assists farmers in monitoring banana
+            ripeness in real-time through YOLO model detection and IoT sensors,
+            integrated with a web-based platform. The system optimizes
+            harvesting, reduces losses, and enhances productivity automatically
+            and accurately.
+          </p>
+          <a
+            href="https://github.com/JerryAnggara"
+            class="text-bold text-[#4B82FC] underline"
+            >Link Github</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="pb-12">
+      <h2 class="text-3xl font-extrabold mb-6 text-center">Experience</h2>
+
+      <div class="relative">
+        <!-- Vertical Line -->
+        <div
+          class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-black transform -translate-x-1/2"
+        ></div>
+
+        <!-- Experience Item 1 - Right side -->
+        <div class="flex items-start mb-8">
+          <div class="w-1/2 pr-12"></div>
+          <div class="relative">
+            <div
+              class="absolute w-5 h-5 bg-[#F36D4D] rounded-full border-2 border-black transform -translate-x-1/2"
+            ></div>
+          </div>
+          <div class="w-1/2 px-6 sm:px-14">
+            <h3 class="font-bold text-base mb-2">Web Developer | Dexprint</h3>
+            <p class="text-sm text-left">
+              Developing a dynamic and responsive website catalog utilizing
+              Node.js, Express, MySQL, React, and Tailwind CSS technologies,
+              with the objective of providing an interactive user experience and
+              facilitating efficient product data management and display.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experience Item 2 - Left side -->
+        <div class="flex items-start mb-8">
+          <div class="w-1/2 text-right px-6 sm:px-14">
+            <h3 class="font-bold text-base mb-2">
+              Teaching Assistant | Calculus & Linear Aljabra
+            </h3>
+            <p class="text-sm text-right">
+              Provided academic support to students through individual
+              consultations and group tutorials, assessed student work, and
+              delivered constructive feedback to enhance learning outcomes.
+            </p>
+          </div>
+          <div class="relative">
+            <div
+              class="absolute w-5 h-5 bg-[#F36D4D] rounded-full border-2 border-black transform -translate-x-1/2"
+            ></div>
+          </div>
+          <div class="w-1/2 pl-12"></div>
+        </div>
+
+        <!-- Experience Item 3 - Right side -->
+        <div class="flex items-start">
+          <div class="w-1/2 pr-12"></div>
+          <div class="relative">
+            <div
+              class="absolute w-5 h-5 bg-[#F36D4D] rounded-full border-2 border-black transform -translate-x-1/2"
+            ></div>
+          </div>
+          <div class="w-1/2 px-6 sm:px-14">
+            <h3 class="font-bold text-base mb-2">
+              Staff Commission C | Badan Legislatif Mahasiswa
+            </h3>
+            <p class="text-sm text-left">
+              The responsibilities include gathering and formulating aspirations
+              of Fasilkom Unsika students, facilitating audiences with the
+              academic community, as well as managing informative and
+              educational publication media.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-[#FACA52] py-12 px-4">
+      <div
+        class="max-w-xl bg-white mx-auto rounded-md shadow-[6px_6px_0_0_#000] border border-black p-6"
+      >
+        <h2 class="text-2xl font-bold text-center mb-6">Get In Touch</h2>
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/xyzwevao"
+          method="POST"
+          class="space-y-4"
+        >
+          <div class="flex flex-col sm:flex-row sm:space-x-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              class="w-full border border-black px-4 py-2 mb-2 sm:mb-0"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="w-full border border-black px-4 py-2"
+              required
+            />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="4"
+            class="w-full border border-black px-4 py-2"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-[#F36D4D] text-white w-full py-2 font-semibold shadow-[4px_4px_0_0_#000] hover:brightness-105"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="bg-[#FCFAED] text-center py-6 px-4">
+      <h3 class="text-3xl font-bold mb-2">Jerry Anggara</h3>
+      <img src="Footer.png" class="h-[28px] mx-auto" />
+      <div
+        class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-4"
+      >
+        <div class="text-left">
+          <p class="text-sm">
+            This website was created with
+            <span class="text-[#F36D4D] font-bold">love</span> and
+            <span class="text-[#4B82FC] font-bold">hard work</span>
+          </p>
+          <p class="text-sm mt-1">Design inspired by @Akib Tanjil</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://www.linkedin.com/in/jerry-anggara-12b4a6266/">
+            <img src="LinkedIn.png" alt="LinkedIn" class="w-8 h-8" />
+          </a>
+          <a href="https://www.instagram.com/jerry.agg/">
+            <img src="Instagram.png" alt="Instagram" class="w-8 h-8" />
+          </a>
+          <a href="mailto:jerryagg01@gmail.com">
+            <img src="Email.png" alt="Gmail" class="h-8" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="notification"
+      class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-2 rounded shadow-lg hidden transition-opacity duration-300 z-50"
+    >
+      Your message has been sent!
+    </div>
+
+    <script>
+      function showCategory(categoryId, btn) {
+        const categories = document.querySelectorAll(".skills-grid");
+        categories.forEach((cat) => cat.classList.add("hidden"));
+        document.getElementById(categoryId).classList.remove("hidden");
+
+        const buttons = document.querySelectorAll(".category-btn");
+        buttons.forEach((button) =>
+          button.classList.remove(
+            "bg-[#F36D4D]",
+            "text-white",
+            "shadow-[4px_4px_0_0_#000]"
+          )
+        );
+        btn.classList.add(
+          "bg-[#F36D4D]",
+          "text-white",
+          "shadow-[4px_4px_0_0_#000]"
+        );
+      }
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+          const notification = document.getElementById("notification");
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: formData,
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              form.reset();
+              // Tampilkan notifikasi
+              notification.textContent = "Your message has been sent!";
+              notification.classList.remove("hidden");
+              notification.classList.add("opacity-100");
+
+              // Sembunyikan setelah 3 detik
+              setTimeout(() => {
+                notification.classList.add("hidden");
+              }, 3000);
+            } else {
+              notification.textContent = "Oops! Something went wrong.";
+              notification.classList.remove("hidden");
+              setTimeout(() => notification.classList.add("hidden"), 3000);
+            }
+          } catch (error) {
+            notification.textContent = "Network error!";
+            notification.classList.remove("hidden");
+            setTimeout(() => notification.classList.add("hidden"), 3000);
+          }
+        });
+    </script>
+  </body>
+</html>
